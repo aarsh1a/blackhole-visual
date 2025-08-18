@@ -36,12 +36,12 @@ body {
     background: #00000066;
     border: 1px solid #ffffff33;
     border-radius: 5px;
-    color: #00ff88;
+    color: #e7ebe9;
     font-family: 'Roboto Mono', monospace;
     /* A good sci-fi font */
     font-size: 14px;
     line-height: 1.6;
-    text-shadow: 0 0 5px #00ff88;
+    text-shadow: 0 0 5px #b1b7b4;
     pointer-events: none;
     min-width: 280px;
 }

@@ -112,17 +112,16 @@ export default class Experience {
             const cameraDistance = cameraPosition.length()
             const horizonRadius = this.world.blackHole.eventHorizonRadius
 
-            // 1. Calculate distance to event horizon
-            const distanceToHorizon = Math.max(0, cameraDistance - horizonRadius)
-            this.ui.distance.textContent = `${distanceToHorizon.toFixed(2)} units`
+            const distanceScale = 100
 
-            // 2. Calculate relative velocity
+            const distanceToHorizon = Math.max(0, cameraDistance - horizonRadius)
+            this.ui.distance.textContent = `${(distanceToHorizon / distanceScale).toFixed(2)} ly`
+
             const positionDelta = cameraPosition.distanceTo(this.lastCameraPosition)
             const velocity = positionDelta / (this.time.delta / 1000) // units per second
             this.lastCameraPosition.copy(cameraPosition)
-            this.ui.velocity.textContent = `${Math.round(velocity)} m/s`
+            this.ui.velocity.textContent = `${Math.round(velocity / distanceScale)} ly/s`
 
-            // 3. Calculate time dilation
             const dilation = Math.min(1, Math.max(0.1, (cameraDistance - horizonRadius) / (20 - horizonRadius)))
             this.ui.dilation.textContent = `${dilation.toFixed(3)}x`
         }
