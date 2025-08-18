@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+.experience {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.credits {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #ffffff;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+}
+
+.credits a {
+    color: inherit;
+}
+
+#data-ui {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background: #00000066;
+    border: 1px solid #ffffff33;
+    border-radius: 5px;
+    color: #00ff88;
+    font-family: 'Roboto Mono', monospace;
+    /* A good sci-fi font */
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: 0 0 5px #00ff88;
+    pointer-events: none;
+    min-width: 280px;
+}
+
+#data-ui p {
+    margin: 0;
+}
+
+#data-ui span {
+    color: #ffffff;
+    font-weight: bold;
+}
